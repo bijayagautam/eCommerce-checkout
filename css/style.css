@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body{
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-heading{
+    max-width: 50%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-form{
+    max-width: 10%;
+    min-width: 40em;
+}
+
+.productDetails ul{
+    padding-left: 0;
+}
+.checkout-form .product-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.form-header{
+    font-weight: bolder;
+}
+
+.checkout-form li{
+    list-style: none;
+}
+
+.total-details ul{
+    list-style: none;
+}
+
+.calcu-button{
+    margin: 1em 2em;
+    background-color: rgb(237, 236, 240);
+    border: none;
+    color:black;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 0.3em;
+}
+
+.promotion{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.promo-detail{
+    margin: 1em 2em;
+}
+
+.promo-button{
+    margin: 1em 7em;
+    background-color: rgb(237, 236, 240);
+    border: none;
+    color:black;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 0.3em;
+}
+
+

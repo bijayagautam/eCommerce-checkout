@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECommerce Checkout</title>
+    <meta name="description" content="Welcome to loan calculator.">
+    <meta name="author" content="Bijaya Gautam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css?v=1.0">
+</head>
+<body>
+    <header>
+        <h1 class="main-heading">ECommerce Checkout</h1>
+    </header>
+    <main>
+        <form class="checkout-form">
+            <ul class="product-details form-header">
+                <li>Product</li>
+                <li>Quantity</li>
+                <li>Unit Price</li>
+                <li>Extended Price</li>
+            </ul>
+            <ul class="product-details">
+                <li>Pants</li>
+                <li class="productDetails">
+                    <ul class="product-details">
+                        <li><input type="button" value="-" id="substractButton" class="substract-button"></li>
+                        <li> 0 </li>
+                        <li><input type="button" value="+" id="addButton" class="add-button"></li>
+                    </ul>
+                </li>
+                <li>$40.99</li>
+                <li>$0.00</li>
+            </ul>
+            <ul class="product-details">
+                <li>Shirt</li>
+                <li class="productDetails">
+                    <ul class="product-details">
+                        <li><input type="button" value="-" id="substractButton" class="substract-button"></li>
+                        <li> 0 </li>
+                        <li><input type="button" value="+" id="addButton" class="add-button"></li>
+                    </ul>
+                </li>
+                <li>$40.99</li>
+                <li>$0.00</li>
+            </ul>
+            <section>
+                <div class="cal-button">
+                    <input type="button" value="Calculate" id="calculateButton" class="calcu-button">
+                </div>
+                <div class="total-details">
+                    <ul>
+                        <li>Subtotal:</li>
+                        <li>Tax:</li>
+                        <li>Total:</li>
+                    </ul>
+                </div>
+                <div class="promotion">
+                    <p class="promo-detail">Have a Promo Code?</p>
+                    <input type="button" value="Click to Enter" id="promoButton" class="promo-button">
+                </div>
+            </section>
+        </form>
+        
+    </main>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
