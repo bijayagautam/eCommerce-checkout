@@ -26,34 +26,41 @@
                 <li class="productDetails">
                     <ul class="product-details">
                         <li><input type="button" value="-" id="substractButton" class="substract-button"></li>
-                        <li> 0 </li>
+                        <label id="pantQuantityLabel"></label>
                         <li><input type="button" value="+" id="addButton" class="add-button"></li>
                     </ul>
                 </li>
-                <li>$40.99</li>
-                <li>$0.00</li>
+                <label id="pantUnitPriceLabel"></label>
+                <label id="pantExtendedPriceLabel"></label>
             </ul>
             <ul class="product-details">
                 <li>Shirt</li>
                 <li class="productDetails">
                     <ul class="product-details">
                         <li><input type="button" value="-" id="substractButton" class="substract-button"></li>
-                        <li> 0 </li>
+                        <label id="shirtQuantityLabel">0</label>
                         <li><input type="button" value="+" id="addButton" class="add-button"></li>
                     </ul>
                 </li>
-                <li>$40.99</li>
-                <li>$0.00</li>
+                <label id="shirtUnitPriceLabel"></label>
+                <label id="shirtExtendedPriceLabel"></label>
             </ul>
             <section>
                 <div class="cal-button">
                     <input type="button" value="Calculate" id="calculateButton" class="calcu-button">
                 </div>
-                <div class="total-details">
-                    <ul>
+                <div class="grandDetails">
+                    <ul class="total-details">
                         <li>Subtotal:</li>
+                        <label id="subtotalLabel">$40.99</label>
+                    </ul>
+                    <ul class="total-details">
                         <li>Tax:</li>
+                        <label id="taxLabel">$40.99</label>
+                    </ul>
+                    <ul class="total-details">
                         <li>Total:</li>
+                        <label id="totalLabel">$40.99</label>
                     </ul>
                 </div>
                 <div class="promotion">
@@ -64,7 +71,6 @@
         </form>
         
     </main>
-
     <script src="/js/index.js"></script>
 </body>
 </html>
