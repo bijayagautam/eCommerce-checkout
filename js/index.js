@@ -1,31 +1,47 @@
-let subButton = document.getElementById("substractButton");
-let addButton = document.getElementById("addButton");
-let calButton = document.getElementById("calculateButton");
-let promoButton = document.getElementById("promoButton");
+let subPantButton = document.getElementById("substractPantButton");
+let addPantButton = document.getElementById("addPantButton");
 
-let pantQuantity = 0;
-let shirtQuantity = 0;
-
-let pantPrice = 0;
-let shirtPrice = 0;
-let pantUnitPrice = 40.99;
-let shirtUnitPrice = 10.99;
-
-let pantExtendedPrice = 0;
-let shirtExtendedPrice = 0;
-
-document.getElementById(`pantQuantityLabel`).innerHTML = `${pantQuantity}`;
-document.getElementById(`pantQuantityLabel`).innerHTML = `${shirtQuantity}`;
-
-document.getElementById(`pantUnitPriceLabel`).innerHTML = `$ ${pantPrice.toFixed(2)}`;
-document.getElementById(`shirtUnitPriceLabel`).innerHTML = `$ ${shirtPrice.toFixed(2)}`;
-
-document.getElementById(`pantExtendedPriceLabel`).innerHTML = `$ ${pantExtendedPrice.toFixed(2)}`;
-document.getElementById(`shirtExtendedPriceLabel`).innerHTML = `$ ${shirtExtendedPrice.toFixed(2)}`;
+let subShirtButton = document.getElementById("substractShirtButton");
+let addShirtButton = document.getElementById("addShirtButton");
 
 
-function quantity(pantQuantity){
-    quan = pantQuantity + 1;
-    return quan;
+function subQty(quantity){
+    if (quantity <= 0){
+        return 0;
+    }
+    else{
+        return(--quantity);
+    }
 }
-addButton.addEventListener("click",quantity)
+
+function addQty(quantity){
+    return(++quantity);
+}
+
+function subPantQty(){
+    let pantqty = subQty(document.getElementById(`pantQuantityLabel`).innerHTML);
+    document.getElementById(`pantQuantityLabel`).innerHTML = `${pantqty}`;
+}
+
+function addPantQty(){
+    let pantqty = addQty(document.getElementById(`pantQuantityLabel`).innerHTML);
+    document.getElementById(`pantQuantityLabel`).innerHTML = `${pantqty}`;
+}
+
+function subShirtQty(){
+    let shirtqty = subQty(document.getElementById(`shirtQuantityLabel`).innerHTML);
+    document.getElementById(`shirtQuantityLabel`).innerHTML = `${shirtqty}`;
+}
+
+function addShirtQty(){
+    let shirtqty = addQty(document.getElementById(`shirtQuantityLabel`).innerHTML);
+    document.getElementById(`shirtQuantityLabel`).innerHTML = `${shirtqty}`;
+}
+
+
+
+subPantButton.addEventListener("click",subPantQty)
+addPantButton.addEventListener("click",addPantQty)
+
+subShirtButton.addEventListener("click",subShirtQty)
+addShirtButton.addEventListener("click",addShirtQty)

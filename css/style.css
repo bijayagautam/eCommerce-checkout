@@ -9,13 +9,16 @@ body{
 .main-heading{
     max-width: 50%;
     font-family: 'Roboto', sans-serif;
+    color: rgb(44, 10, 78);
 }
 
 .checkout-form{
     max-width: 10%;
     min-width: 40em;
     padding: 1em;
-    background-color: rgb(180, 245, 245);;
+    background-color: rgb(238, 245, 245);
+    box-shadow: 0.5em 0.5em 4em rgb(202, 201, 201);
+    border-radius: 0.2em;
 }
 
 .productDetails ul{
@@ -38,11 +41,14 @@ body{
     list-style: none;
 } */
 
+.cal-button{
+    margin: 0 0.8em;
+}
 .calcu-button{
     margin: 1em 2em;
-    background-color: rgb(237, 236, 240);
+    background-color: rgb(44, 10, 78);
     border: none;
-    color:black;
+    color: white;
     padding: 0.5em;
     text-align: center;
     font-size: 0.9em;
@@ -63,9 +69,9 @@ body{
 
 .promo-button{
     margin: 1em 7em;
-    background-color: rgb(237, 236, 240);
+    background-color: rgb(44, 10, 78);
     border: none;
-    color:black;
+    color: white;
     padding: 0.5em;
     text-align: center;
     font-size: 0.9em;
