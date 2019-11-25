@@ -13,7 +13,7 @@ body{
 }
 
 .checkout-form{
-    /* max-width: 10%; */
+    max-width: 20%;
     min-width: 40em;
     padding: 1em;
     background-color: rgb(238, 245, 245);

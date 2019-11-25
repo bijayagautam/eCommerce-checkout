@@ -46,7 +46,7 @@ function subPantQty(){
     let extendedPrice = getPrice(pantUnitPrice,pantqty)
     document.getElementById(`pantQuantityLabel`).innerHTML = `${pantqty}`;
     document.getElementById(`pantUnitPriceLabel`).innerHTML = `${pantUnitPrice}`;
-    document.getElementById(`pantExtendedPriceLabel`).innerHTML = `${extendedPrice}`;
+    document.getElementById(`pantExtendedPriceLabel`).innerHTML = `${extendedPrice.toFixed(2)}`;
 }
 
 function addPantQty(){
@@ -56,7 +56,7 @@ function addPantQty(){
 
     document.getElementById(`pantQuantityLabel`).innerHTML = `${pantqty}`;
     document.getElementById(`pantUnitPriceLabel`).innerHTML = `${pantUnitPrice}`;
-    document.getElementById(`pantExtendedPriceLabel`).innerHTML = `${extendedPrice}`;
+    document.getElementById(`pantExtendedPriceLabel`).innerHTML = `${extendedPrice.toFixed(2)}`;
 
 }
 
@@ -67,7 +67,7 @@ function subShirtQty(){
 
     document.getElementById(`shirtQuantityLabel`).innerHTML = `${shirtqty}`;
     document.getElementById(`shirtUnitPriceLabel`).innerHTML = `${shirtUnitPrice}`;
-    document.getElementById(`shirtExtendedPriceLabel`).innerHTML = `${extendedPrice}`;
+    document.getElementById(`shirtExtendedPriceLabel`).innerHTML = `${extendedPrice.toFixed(2)}`;
 }
 
 function addShirtQty(){
@@ -77,7 +77,7 @@ function addShirtQty(){
 
     document.getElementById(`shirtQuantityLabel`).innerHTML = `${shirtqty}`;
     document.getElementById(`shirtUnitPriceLabel`).innerHTML = `${shirtUnitPrice}`;
-    document.getElementById(`shirtExtendedPriceLabel`).innerHTML = `${extendedPrice}`;
+    document.getElementById(`shirtExtendedPriceLabel`).innerHTML = `${extendedPrice.toFixed(2)}`;
 }
 
 function calculateDetail(){
