@@ -83,4 +83,8 @@ body{
     grid-template-columns: 1fr 7fr;
 }
 
+.promo-input{
+    margin: 0 56%;
+}
+
 

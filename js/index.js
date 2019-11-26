@@ -6,6 +6,9 @@ let addShirtButton = document.getElementById("addShirtButton");
 
 let calButton = document.getElementById("calculateButton");
 
+let promoClickButton = document.getElementById("promoButton");
+
+
 let pantQuantity = 0;
 let pantUnitPrice = 49.99;
 let extendedPrice = 0;
@@ -86,10 +89,47 @@ function calculateDetail(){
     let result = pantExtPrice + shirtExtPrice;
     let tax = result * 13/100;
     let total = result + tax;
+    let copn = document.getElementById("promoTextBox").value;
+
+    let couponValidation = validatePromoCode(copn);
+    if(couponValidation == "NOTAX"){
+        total = result;
+    }
+    if(couponValidation == "FIFTYFIFTY"){
+        result = (pantExtPrice + shirtExtPrice)/2;
+        tax = result * 13/100;
+        total = result + tax;
+    }
+    if(couponValidation == false){
+        document.getElementById('promoTextBox').innerHTML="Invalid coupon"
+    }
+    
 
     document.getElementById(`subtotalLabel`).innerHTML = `${result.toFixed(2)}`;
     document.getElementById(`taxLabel`).innerHTML = `${tax.toFixed(2)}`;
     document.getElementById(`totalLabel`).innerHTML = `${total.toFixed(2)}`;
+}
+
+function validatePromoCode(coupon) {
+    var promoCodeOne = "NOTAX";
+    var promoCodeTwo = "FIFTYFIFTY";
+    var promoInput = document.getElementById('promoTextBox').value;
+    if(promoInput.toUpperCase() == promoCodeOne.toUpperCase()) {
+        return promoCodeOne;
+    }if(promoInput.toUpperCase() == promoCodeTwo.toUpperCase()) {
+        return promoCodeTwo;
+    } else {
+        document.getElementById('promoTextBox').innerHTML="Invalid coupon";
+        return false;
+    }
+}
+
+function showPromoTextBox(){
+    document.getElementById("promoTextBox").style.display = "block";
+}
+
+function hidePromoTextBox(){
+    document.getElementById("promoTextBox").style.display = "none";
 }
 
 subPantButton.addEventListener("click",subPantQty)
@@ -99,3 +139,7 @@ subShirtButton.addEventListener("click",subShirtQty)
 addShirtButton.addEventListener("click",addShirtQty)
 
 calButton.addEventListener("click",calculateDetail)
+
+promoClickButton.addEventListener("click",showPromoTextBox)
+
+window.addEventListener("load",hidePromoTextBox)
